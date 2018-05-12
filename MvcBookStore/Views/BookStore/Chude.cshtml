@@ -1,0 +1,11 @@
+﻿<p class="lead"><h1> CHỦ ĐỀ SÁCH</h1></p>
+<div class="list-group">
+    @foreach (var item in Model)
+    {
+        <ol>
+        <a href="@Url.Action("SPTheoChuDe", "BookStore", new { id = item.MaCD })" class="list-group-item">
+            @item.TenChuDe
+        </a>
+            </ol>
+    }
+</div>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+    <script src="~/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: "textare" });</script>
+</head>
+<body>
+    <div id="templatemo_container">
+        <div id="templatemo_menu">
+            <ul>
+                <li><a href="#" class="current">Start BootStrap</a></li>
+                <li><a href="#">TRANG CHỦ</a></li>
+                <li><a href="#">QUẢN LÍ CHỦ ĐỀ</a></li>
+                <li><a href="#">QUẢN LÍ NXB</a></li>
+                <li><a href="Sach">QUẢN LÍ SÁCH</a> </li>
+            </ul>
+        </div> <!-- end of menu -->
+
+        <div>
+            @RenderBody()
+        </div>
+</body>
+</html>

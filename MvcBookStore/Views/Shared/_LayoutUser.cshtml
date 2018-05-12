@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width" />
+            <title>@ViewBag.Title</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <link href="~/Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+        </head>
+        <body>
+
+            <div id="templatemo_container">
+                <div id="templatemo_menu">
+                    <ul>
+                        <li><a href="#" class="current">Start BootStrap</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li> @Html.Action("GiohangPartial","Giohang")
+
+                            @*<a href="@Url.Action("Giohang","Giohang")" style="font-weight: bold;text-decoration:none;">
+                                <img src="~/Images/giohang.png" width="10" height="10" />Giỏ hàng (@(ViewBag.Tongsoluong))
+                            </a>*@
+                        </li>
+                    </ul>
+                </div> <!-- end of menu -->
+
+                <div id="templatemo_content">
+                    <div id="templatemo_content_left">
+                        <div class="templatemo_content_left_section">
+                            @Html.Action("Chude", "BookStore")
+                        </div>
+                        <div class="templatemo_content_left_section">
+                            @Html.Action("NhaXuatBan","BookStore")
+                        </div>
+                    </div>
+                    Bùi Thị Trúc Linh 15dh110166 <!-- end of content left -->
+                    <div id="templatemo_content_right">
+                        <div>@RenderBody()</div>
+                    </div>
+                <div id="templatemo_footer">
+                    Copyright © 2018 <a href="#"><strong>Bui Thi Truc Linh</strong>
+                </div><!-- end of footer -->
+              </div> <!-- end of container -->
+            </div>
+        </body>
+    </html>

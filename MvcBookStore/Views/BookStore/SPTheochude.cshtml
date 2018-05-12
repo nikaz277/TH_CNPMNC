@@ -1,0 +1,28 @@
+﻿
+
+    @{
+        ViewBag.Title = "SPTheochude";
+        Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    }
+
+    <h2 style="text-align:center;color:red">SÁCH THEO CHỦ ĐỀ</h2>
+                      @foreach (var sach in Model)
+                      {
+                          <div class="templatemo_product_box" style="padding">
+                              <a href="@Url.Action("Details", "BookStore", new { id = sach.MaCD })">
+                                  <img alt="@sach.Tensach" src="~/Hinhsanpham/@sach.Hinhminhhoa" width="100" />
+                                  @sach.Tensach
+                              </a>
+                              <div class="ratings">
+                                  <p class="pull-right">15 Reviews</p>
+                                  <p>
+                                      <span class="glyphicon glyphicon-star"></span>
+                                      <span class="glyphicon glyphicon-star"></span>
+                                      <span class="glyphicon glyphicon-star"></span>
+                                      <span class="glyphicon glyphicon-star"></span>
+                                      <span class="glyphicon glyphicon-star"></span>
+                                  </p>
+                              </div>
+                          </div >
+                      }
+
